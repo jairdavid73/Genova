@@ -1,0 +1,241 @@
+:root {
+  --background: #fff8fc;
+  --foreground: #171114;
+  --muted: #74666d;
+  --panel: #ffffff;
+  --blush: #f7d9f3;
+  --rose: #c85d91;
+  --cyan: #37c8dd;
+  --violet: #b85cc2;
+  --border: rgba(93, 56, 76, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background:
+    linear-gradient(180deg, #ffffff 0%, var(--background) 48%, #fff2fa 100%);
+  color: var(--foreground);
+  font-family: "Times New Roman", Georgia, serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.page-shell {
+  width: min(1240px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 30px 0 54px;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 0 20px;
+  border-top: 1px solid rgba(23, 17, 20, 0.38);
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.brand-lockup img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.brand-lockup span {
+  font-size: clamp(2.25rem, 5vw, 4.25rem);
+  line-height: 1;
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+}
+
+.site-header p {
+  margin: 0;
+  font-size: clamp(0.68rem, 1.4vw, 0.95rem);
+  letter-spacing: 0;
+  word-spacing: 1.2rem;
+  white-space: nowrap;
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.86fr) minmax(360px, 1.14fr);
+  min-height: 330px;
+  overflow: hidden;
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, rgba(252, 221, 249, 0.95), rgba(251, 211, 246, 0.82)),
+    #f5d5f2;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  padding: clamp(30px, 5vw, 72px);
+}
+
+.hero-copy p {
+  max-width: 15ch;
+  margin: 0;
+  font-size: clamp(1.45rem, 2.8vw, 2.8rem);
+  line-height: 0.9;
+  text-align: center;
+}
+
+.hero-media {
+  position: relative;
+  min-height: 330px;
+}
+
+.hero-media img {
+  object-fit: contain;
+  object-position: right bottom;
+  transform: scale(1.08);
+}
+
+.collection {
+  padding: 52px 0 34px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--rose);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.section-heading h1 {
+  max-width: 620px;
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 4.7rem);
+  font-weight: 400;
+  line-height: 0.98;
+  text-align: right;
+}
+
+.brand-footer {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  padding: 18px 0 0;
+}
+
+.brand-footer img {
+  width: clamp(92px, 13vw, 142px);
+  height: auto;
+  object-fit: contain;
+}
+
+.brand-footer p {
+  margin: 0;
+  padding: 6px 20px;
+  border: 1px solid rgba(200, 93, 145, 0.32);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  color: #5f4c56;
+  font-size: 0.74rem;
+  letter-spacing: 0;
+}
+
+@media (max-width: 720px) {
+  .page-shell {
+    width: min(100% - 24px, 520px);
+    padding: 18px 0 36px;
+  }
+
+  .site-header {
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .brand-lockup {
+    gap: 10px;
+  }
+
+  .brand-lockup img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .brand-lockup span {
+    font-size: clamp(1.9rem, 10vw, 2.8rem);
+    letter-spacing: 0.09em;
+  }
+
+  .site-header p {
+    padding-top: 6px;
+    font-size: 0.62rem;
+    line-height: 1.6;
+    text-align: right;
+    white-space: normal;
+    word-spacing: 0.18rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero-copy {
+    padding: 32px 24px 10px;
+  }
+
+  .hero-copy p {
+    max-width: 18ch;
+    font-size: clamp(1.35rem, 7vw, 2rem);
+  }
+
+  .hero-media {
+    min-height: 240px;
+  }
+
+  .hero-media img {
+    object-position: center bottom;
+    transform: scale(1.06);
+  }
+
+  .collection {
+    padding: 36px 0 28px;
+  }
+
+  .section-heading {
+    display: grid;
+    gap: 8px;
+  }
+
+  .section-heading h1 {
+    text-align: left;
+  }
+}
