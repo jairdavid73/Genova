@@ -1,5 +1,6 @@
 import { HoverGallery } from "@/components/hover-gallery";
 import { PerfumeChooser } from "@/components/perfume-chooser";
+import { assetPath } from "@/lib/asset-path";
 import Image from "next/image";
 
 const hoverItems = [
@@ -7,21 +8,21 @@ const hoverItems = [
     title: "Romance de Verano",
     eyebrow: "Floratta",
     description: "Notas radiantes, florales y frutales para dejar una huella delicada.",
-    imageSrc: "/images/genova/perfume-floratta-roca.png",
+    imageSrc: assetPath("/images/genova/perfume-floratta-roca.png"),
     imageAlt: "Perfume Floratta rosa con flores sobre piedra"
   },
   {
     title: "Brisa Floral",
     eyebrow: "Colección",
     description: "Un aroma luminoso inspirado en tardes suaves, piel fresca y elegancia natural.",
-    imageSrc: "/images/genova/perfume-floratta-mar.png",
+    imageSrc: assetPath("/images/genova/perfume-floratta-mar.png"),
     imageAlt: "Perfume Floratta frente al mar con flores y frutas"
   },
   {
     title: "Elegancia Rosa",
     eyebrow: "Originales",
     description: "Fragancias seleccionadas para acompañar tus momentos con presencia y distinción.",
-    imageSrc: "/images/genova/perfume-miss-dior.png",
+    imageSrc: assetPath("/images/genova/perfume-miss-dior.png"),
     imageAlt: "Perfume Miss Dior rosa con reflejo"
   }
 ];
@@ -32,7 +33,7 @@ export default function Home() {
       <header className="site-header" aria-label="Encabezado de Génova">
         <div className="brand-lockup">
           <Image
-            src="/images/genova/logo-genova.png"
+            src={assetPath("/images/genova/logo-genova.png")}
             alt="Logo de Génova"
             width={94}
             height={94}
@@ -53,7 +54,7 @@ export default function Home() {
         </div>
         <div className="hero-media" aria-hidden="true">
           <Image
-            src="/images/genova/hero-perfume.png"
+            src={assetPath("/images/genova/hero-perfume.png")}
             alt=""
             fill
             unoptimized
@@ -75,7 +76,7 @@ export default function Home() {
 
       <footer className="brand-footer" aria-label="Firma de marca">
         <Image
-          src="/images/genova/logo-genova.png"
+          src={assetPath("/images/genova/logo-genova.png")}
           alt=""
           width={132}
           height={132}

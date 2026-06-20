@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Check, Sparkles } from "lucide-react";
+import { assetPath } from "@/lib/asset-path";
 import { useMemo, useState } from "react";
 import styles from "./perfume-chooser.module.css";
 
@@ -11,7 +12,7 @@ const perfumes = [
     family: "Floral frutal",
     mood: "Suave, luminosa y romantica",
     occasion: "Ideal para tardes especiales",
-    imageSrc: "/images/genova/perfume-floratta-roca.png",
+    imageSrc: assetPath("/images/genova/perfume-floratta-roca.png"),
     imageAlt: "Perfume Floratta rosa sobre piedra con flores",
     notes: ["Flor de verano", "Durazno", "Vainilla suave"],
     intensity: 3
@@ -21,7 +22,7 @@ const perfumes = [
     family: "Fresca floral",
     mood: "Alegre, limpia y delicada",
     occasion: "Perfecta para el dia a dia",
-    imageSrc: "/images/genova/perfume-floratta-mar.png",
+    imageSrc: assetPath("/images/genova/perfume-floratta-mar.png"),
     imageAlt: "Perfume Floratta frente al mar con flores y frutas",
     notes: ["Petalos frescos", "Frutas jugosas", "Brisa marina"],
     intensity: 2
@@ -31,7 +32,7 @@ const perfumes = [
     family: "Floral elegante",
     mood: "Sofisticada, femenina y memorable",
     occasion: "Para noches y momentos de presencia",
-    imageSrc: "/images/genova/perfume-miss-dior.png",
+    imageSrc: assetPath("/images/genova/perfume-miss-dior.png"),
     imageAlt: "Perfume Miss Dior rosa con reflejo",
     notes: ["Rosa", "Almizcle", "Madera clara"],
     intensity: 4
